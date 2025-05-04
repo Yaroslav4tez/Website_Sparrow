@@ -1,0 +1,306 @@
+/* ========================
+   Глобальні стилі
+   ======================== */
+body {
+  background: linear-gradient(70deg, rgba(158, 122, 80, 0.4), rgba(183, 169, 154, 0.2)); /* Градієнт для фону */
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0; /* Вимикаємо стандартні відступи */
+  padding: 0;
+}
+
+/* ========================
+   Стилі для заголовка
+   ======================== */
+header {
+
+
+
+
+  color: white;
+}
+
+/* ========================
+   Стилі для основного контенту
+   ======================== */
+main {
+  padding: 20px;
+}
+
+/* ========================
+   Стилі для футера
+   ======================== */
+footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+/* ========================
+   Стилі для контейнера .korobka
+   ======================== */
+.korobka {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Ліва, основна, права панелі */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ========================
+   Стилі для панелей: лівої та правої
+   ======================== */
+.leftPanel, .rightPanel {
+  background-color: lightblue; /* Легкий блакитний фон для панелей */
+  padding: 20px;
+  border-radius: 10px; /* Округлені кути */
+}
+
+.leftPanel {
+  background: inherit;
+}
+
+.rightPanel {
+  background: inherit;
+}
+
+.leftPanel p, .rightPanel p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+/* ========================
+   Стилі для таблиць
+   ======================== */
+.sources, .sparowTable, .secondTable {
+  width: 100%;
+  border-collapse: collapse; /* Забезпечує, щоб межі таблиці не перекривались */
+}
+
+.sources {
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.sources th {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.sparowTable th, .sparowTable td, .secondTable th, .secondTable td {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: left;
+}
+
+.sparowTable th, .secondTable th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.sparowTable tr:hover, .secondTable tr:hover {
+  background-color: #f0f0f0; /* Легкий фон при наведенні на рядок */
+}
+
+/* ========================
+   Стилі для посилань
+   ======================== */
+a {
+  text-decoration: none; /* Без підкреслення */
+  color: #0066cc; /* Колір для посилань */
+  transition: color 0.3s ease; /* Плавна зміна кольору */
+}
+
+a:hover {
+  color: #ff6600; /* Колір при наведенні */
+  text-decoration: underline; /* Підкреслення на ховері */
+}
+
+a:visited {
+  color: #800080; /* Колір для відвіданих посилань */
+}
+
+ .middleHeader {
+  position: absolute;
+  height: 20px;
+  width: 20%;
+  border: #65696b solid;
+  background-color: #65696b;
+  border-radius: 30px;
+}
+
+.leftHeader {
+  width: 40%;
+  height: 20px;
+  border: #0066cc solid 3px;
+  border-top-left-radius: 80%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 5%;
+  background-color: aqua;
+}
+.leftHeaderBottom {
+  margin: 20px;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+}
+.RightHeader {
+  width: 40%;
+  border: #0066cc solid 3px;
+}
+
+
+.bird{
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
+  filter: invert(34%) sepia(55%) saturate(427%) hue-rotate(141deg) brightness(93%) contrast(91%);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+}
+
+.bird-one{
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+
+}
+.bird-two{
+  animation-duration: 0.9;
+  animation-delay: -0.75.s;
+
+}
+.bird-three{
+  animation-duration:1.25s;
+  animation-delay: -0.25s
+
+}
+.bird-four{
+  animation-duration: 1.1s;
+  animation-delay: -0.5s;
+}
+
+.bird-container {
+position: absolute;
+top: -5%;
+left: -3%;
+transform: scale(0) translateX(-10vw);
+will-change: transform;
+
+animation-name: fly-right-one;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+
+.bird-container-one{
+animation-duration: 15s;
+animation-delay: 0;
+}
+
+.bird-container-two{
+animation-duration: 16s;
+animation-delay: 1s;
+}
+
+.bird-container-three{
+animation-duration: 14.6s;
+animation-delay: 9.5s;
+}
+
+.bird-container-four {
+  animation-duration: 16s;
+  animation-delay: 10.25s;
+}
+/* @keyframes fly-cycle {
+  100%{
+      background-position: -3600px 0;
+  }
+} */
+@keyframes fly-cycle {
+
+100% {
+  background-position: -900px 0;
+}
+
+}
+
+@keyframes fly-right-one {
+
+0% {
+  transform: scale(0.3) translateX(-10vw);
+}
+
+10% {
+  transform: translateY(2vh) translateX(10vw) scale(0.4);
+}
+
+20% {
+  transform: translateY(0vh) translateX(30vw) scale(0.5);
+}
+
+30% {
+  transform: translateY(4vh) translateX(50vw) scale(0.6);
+}
+
+40% {
+  transform: translateY(2vh) translateX(70vw) scale(0.6);
+}
+
+50% {
+  transform: translateY(0vh) translateX(90vw) scale(0.6);
+}
+
+60% {
+  transform: translateY(0vh) translateX(110vw) scale(0.6);
+}
+
+100% {
+  transform: translateY(0vh) translateX(110vw) scale(0.6);
+}
+
+}
+
+@keyframes fly-right-two {
+
+0% {
+  transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+}
+
+10% {
+  transform: translateY(0vh) translateX(10vw) scale(0.4);
+}
+
+20% {
+  transform: translateY(-4vh) translateX(30vw) scale(0.6);
+}
+
+30% {
+  transform: translateY(1vh) translateX(50vw) scale(0.45);
+}
+
+40% {
+  transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+}
+
+50% {
+  transform: translateY(0vh) translateX(90vw) scale(0.45);
+}
+
+51% {
+  transform: translateY(0vh) translateX(110vw) scale(0.45);
+}
+
+100% {
+  transform: translateY(0vh) translateX(110vw) scale(0.45);
+}
+
+}
